@@ -1,14 +1,17 @@
 import unittest
 import fizz_buzz
 
-num = [1, 3, 5, 15]
-res = [1, "Fizz", "Buzz", "FizzBuzz"]
+fb = dict()
+fb[1] = 1
+fb[3] = "Fizz"
+fb[5] = "Buzz"
+fb[15] = "FizzBuzz"
 
 
-class FizzBuzzTest(unittest.TestCase):
+class TestFizzBuzz(unittest.TestCase):
     def test_case(self):
-        for i in range(len(num)):
-            self.assertEqual(res[i], fizz_buzz.get_fizz_buzz(num[i]))
+        for k, v in fb.items():
+            self.assertEqual(v, fizz_buzz.get_fizz_buzz(k))
 
 
 if __name__ == '__main__':

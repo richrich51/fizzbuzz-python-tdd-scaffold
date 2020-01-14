@@ -4,7 +4,7 @@ def get_fizz_buzz(n):
     if ext != 0:
         if ext % 10 == 0:
             return "Fizz"
-        elif ext < 10:
+        elif ext < 3:
             return "Buzz"
         return n
     else:

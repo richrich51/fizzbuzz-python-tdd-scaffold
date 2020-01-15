@@ -1,11 +1,8 @@
 def get_fizz_buzz(n):
-    ext = 10 * (n % 5) + n % 3
-
-    if ext != 0:
-        if ext % 10 == 0:
-            return "Fizz"
-        elif ext < 3:
-            return "Buzz"
-        return n
-    else:
+    if n % 15 == 0:
         return "FizzBuzz"
+    if n % 3 == 0:
+        return "Fizz"
+    if n % 5 == 0:
+        return "Buzz"
+    return n
